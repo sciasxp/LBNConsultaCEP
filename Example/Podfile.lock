@@ -1,0 +1,21 @@
+PODS:
+  - BRYHTMLParser (2.1.1)
+  - Kiwi (2.4.0)
+  - LBNConsultaCEP (0.0.1):
+    - BRYHTMLParser (~> 2.1.1)
+
+DEPENDENCIES:
+  - BRYHTMLParser (~> 2.1.1)
+  - Kiwi
+  - LBNConsultaCEP (from `../`)
+
+EXTERNAL SOURCES:
+  LBNConsultaCEP:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BRYHTMLParser: a6ba94c32128e4f51e2f427cd7be00ebc38a7d71
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  LBNConsultaCEP: 5897c0183d3e879e5dd36d034b207382e7791478
+
+COCOAPODS: 0.39.0

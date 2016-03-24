@@ -5,25 +5,63 @@
 [![License](https://img.shields.io/cocoapods/l/LBNConsultaCEP.svg?style=flat)](http://cocoapods.org/pods/LBNConsultaCEP)
 [![Platform](https://img.shields.io/cocoapods/p/LBNConsultaCEP.svg?style=flat)](http://cocoapods.org/pods/LBNConsultaCEP)
 
-## Usage
+## Uso
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Para executar o projeto de exemplo, primeiro clone o repositório e execute `pod install` a partir do diretório Example.
 
 ## Requirements
 
+iOS 7.1 ou posterior.
+
 ## Installation
 
-LBNConsultaCEP is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+LBNConsultaCEP está disponível através do [CocoaPods](http://cocoapods.org). Para instalar, basta adicionar a seguinte linha no PodFile em seu projeto:
 
 ```ruby
 pod "LBNConsultaCEP"
 ```
 
-## Author
+## Documentação
+
+### getAddressFromCEP
+```Objective-c
++ (void)getAddressFromCEP:(NSString *)cep Response:(void(^)(id, NSError *))block
+```
+#### Resumo
+
+Metôdo de classe com processamento assíncrono, que ao informar o cep, retornar através do bloco `block` o resultado da pesquisa.
+
+#### Paramêtros
+- **cep**: String contendo o CEP. Ele pode ser informado somente o número do CEP ou o CEP formatado. EX: `69000-000` ou `69000000`.
+- **block**: É o *callback* que irá retornar o resultado da consulta. O bloco retorna dois paramêtros de tipos: `id` e `NSError`. O primeiro paramêtro retorna o conteúdo da pesquisa caso tenha sido bem sucedida e o segundo retorna um erro caso tenha havido um erro na pesquisa.
+
+## Exemplo
+
+```Objective-c
+[LBNConsultaCEP getAddressFromCEP:self.cepTextField.text Response:^(id address, NSError *error) {
+
+if (!error) {
+
+NSString *rua = address[@"rua"];
+NSString *bairro = address[@"bairro"];
+NSString *cidadeEstado = address[@"cidadeEstado"];
+NSString *cep = address[@"cep"];
+
+} else {
+
+NSLog(@"Erro: %@", error.localizedDescription);
+}
+}];
+```
+
+## OBS
+
+O projeto faz uso da biblioteca [BRYHTMLParser](https://github.com/irace/BRYHTMLParser),  disponível pela licença MIT, para realizar o parse do HTML.
+
+## Autor
 
 Luciano Bastos Nunes, sciasxp@gmail.com
 
-## License
+## Licença
 
-LBNConsultaCEP is available under the MIT license. See the LICENSE file for more info.
+LBNConsultaCEP está disponível sob a licença MIT. Veja o arquivo LICENSE para mais informações.

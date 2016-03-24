@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "LBNConsultaCEP"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of LBNConsultaCEP."
+  s.version          = "0.0.1"
+  s.summary          = "Dado o CEP consulta o endereço no site dos correios."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,16 +17,17 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+Faz a busca de um enderaço a partir do CEP fornecido. A busca é baseada na utilização do site dos correios http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaCepEndereco.cfm.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/LBNConsultaCEP"
+  s.homepage         = "https://github.com/sciasxp/LBNConsultaCEP"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Luciano Bastos Nunes" => "sciasxp@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/LBNConsultaCEP.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/sciasxp/LBNConsultaCEP.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '7.1'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -37,4 +38,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'BRYHTMLParser', '~> 2.1.1'
 end

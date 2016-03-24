@@ -3,10 +3,11 @@ use_frameworks!
 
 target 'LBNConsultaCEP_Example', :exclusive => true do
   pod 'LBNConsultaCEP', :path => '../'
+  pod 'BRYHTMLParser', '~> 2.1.1'
 end
 
 target 'LBNConsultaCEP_Tests', :exclusive => true do
   pod 'LBNConsultaCEP', :path => '../'
-
+  pod 'BRYHTMLParser', '~> 2.1.1'
   pod 'Kiwi'
 end

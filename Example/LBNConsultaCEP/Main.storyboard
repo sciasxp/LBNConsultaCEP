@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-up-hk9">
+                                <rect key="frame" x="250" y="35" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KGd-fd-1x9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKd-VB-yNO">
+                                <rect key="frame" x="0.0" y="85" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6k-ub-lDE">
+                                <rect key="frame" x="200" y="85" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-D6-8tx">
+                                <rect key="frame" x="400" y="85" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bc-bV-oQc">
+                                <rect key="frame" x="370" y="35" width="42" height="30"/>
+                                <state key="normal" title="Busca"/>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="whP-gf-Uak" eventType="touchUpInside" id="7W3-ZP-bsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e6k-ub-lDE" firstAttribute="top" secondItem="0Bc-up-hk9" secondAttribute="bottom" constant="20" id="0ui-en-jSX"/>
+                            <constraint firstItem="0Bc-up-hk9" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="63Q-Pk-9Yf"/>
+                            <constraint firstItem="e6k-ub-lDE" firstAttribute="width" secondItem="oKd-VB-yNO" secondAttribute="width" id="97e-OJ-9QG"/>
+                            <constraint firstItem="6bc-bV-oQc" firstAttribute="centerY" secondItem="0Bc-up-hk9" secondAttribute="centerY" id="LOQ-lE-Pg7"/>
+                            <constraint firstItem="hqH-D6-8tx" firstAttribute="top" secondItem="oKd-VB-yNO" secondAttribute="top" id="S3T-xR-43d"/>
+                            <constraint firstItem="e6k-ub-lDE" firstAttribute="leading" secondItem="oKd-VB-yNO" secondAttribute="trailing" id="XCb-IW-Ne8"/>
+                            <constraint firstItem="0Bc-up-hk9" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="15" id="gwQ-Ve-ChO"/>
+                            <constraint firstItem="6bc-bV-oQc" firstAttribute="leading" secondItem="0Bc-up-hk9" secondAttribute="trailing" constant="20" id="hJL-qE-4aS"/>
+                            <constraint firstItem="hqH-D6-8tx" firstAttribute="leading" secondItem="e6k-ub-lDE" secondAttribute="trailing" id="hUd-qi-RAU"/>
+                            <constraint firstItem="oKd-VB-yNO" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="nsg-D8-iNW"/>
+                            <constraint firstItem="e6k-ub-lDE" firstAttribute="top" secondItem="oKd-VB-yNO" secondAttribute="top" id="pcu-VI-Pub"/>
+                            <constraint firstAttribute="trailing" secondItem="hqH-D6-8tx" secondAttribute="trailing" id="yea-6Q-3XM"/>
+                            <constraint firstItem="hqH-D6-8tx" firstAttribute="width" secondItem="oKd-VB-yNO" secondAttribute="width" id="ypW-qL-1zG"/>
+                            <constraint firstItem="e6k-ub-lDE" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="zZ9-dq-qeP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cepTextField" destination="0Bc-up-hk9" id="q32-HF-Cpd"/>
+                        <outlet property="cityState" destination="hqH-D6-8tx" id="Erh-cy-wnu"/>
+                        <outlet property="neighborhood" destination="TpU-gO-2f1" id="MNn-uC-Prt"/>
+                        <outlet property="street" destination="TpU-gO-2f1" id="67e-XR-H1C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
